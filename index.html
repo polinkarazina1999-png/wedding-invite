@@ -343,6 +343,24 @@
                         <input type="text" id="guestName" name="Имя и фамилия" required placeholder="Например: Иван Иванов" 
        class="w-full px-4 py-3 border-b-2 border-gray-100 focus:border-accent bg-white/50 outline-none transition-colors rounded-t-md">
                     </div>
+                    <!-- Присутствие -->
+                    <div class="mb-8">
+                        <label class="block text-sm uppercase tracking-wide font-medium text-text-main mb-4">Сможете ли вы присутствовать?</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="Присутствие" value="Смогу прийти" class="peer sr-only" required>
+                                <div class="text-center px-5 py-4 rounded-xl border border-accent-light text-sm font-medium tracking-wide transition-colors hover:border-accent peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">
+                                    Смогу прийти
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="Присутствие" value="К сожалению, не смогу присутствовать" class="peer sr-only">
+                                <div class="text-center px-5 py-4 rounded-xl border border-accent-light text-sm font-medium tracking-wide transition-colors hover:border-accent peer-checked:bg-accent peer-checked:text-white peer-checked:border-accent">
+                                    К сожалению, не смогу присутствовать
+                                </div>
+                            </label>
+                        </div>
+                    </div>
 
                     <!-- Еда -->
                     <div class="mb-8">
