@@ -37,7 +37,6 @@
 
     <style>
         body {
-            background-color: #FBF9F6;
             color: #3A3532;
             scroll-behavior: smooth;
         }
@@ -78,7 +77,7 @@
         }
         
         .timer-box {
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
         }
 
@@ -98,44 +97,100 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased overflow-x-hidden">
+<body class="font-sans antialiased overflow-x-hidden relative">
 
-<!-- Обложка (Первый экран) -->
-    <section class="relative h-screen min-h-[600px] flex flex-col items-center justify-center text-center px-6 border-b-8 border-white bg-cover bg-no-repeat" 
-             style="background-image: url('IMG_7519.JPEG'); background-position: 40% 20%;">
+    <!-- ГЛОБАЛЬНЫЙ ФОН НА ВЕСЬ САЙТ -->
+    <div class="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style="background-image: url('https://i.pinimg.com/736x/20/c2/df/20c2dfcb0f9e4432b993e16f9974092b.jpg');">
+        <!-- Полупрозрачная пелена, чтобы текст читался -->
+        <div class="absolute inset-0 bg-[#FBF9F6]/85"></div>
+    </div>
+
+    <!-- Обложка (Первый экран) -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-16 border-b border-accent-light/30">
         
-        <!-- Светлый полупрозрачный слой поверх фото, чтобы текст легко читался -->
-        <div class="absolute inset-0 bg-[#FBF9F6]/70 pointer-events-none"></div>
-        
-        <div class="z-10 reveal active">
-            <p class="uppercase tracking-[0.3em] text-xs font-medium text-accent mb-8">Приглашение на свадьбу</p>
+        <div class="z-10 reveal active mt-8">
+            <p class="uppercase tracking-[0.3em] text-xs font-medium text-accent mb-6">Приглашение на свадьбу</p>
             <h1 class="font-serif text-6xl md:text-8xl text-text-main leading-tight mb-4">
                 Ярослав <br>
                 <span class="text-accent text-5xl md:text-7xl">&</span> <br>
                 Полина
             </h1>
-            <p class="font-serif text-2xl md:text-3xl mt-8 tracking-widest text-text-main">28 АВГУСТА 2026</p>
+            
+            <!-- Календарь -->
+            <div class="mt-6 bg-white/70 backdrop-blur-md px-6 py-6 rounded-[2rem] border border-accent shadow-sm inline-block">
+                <p class="font-serif italic text-4xl text-text-main mb-4">Август 2026</p>
+                <div class="grid grid-cols-7 gap-x-3 gap-y-2 text-sm md:text-base text-text-main font-medium">
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Пн</div>
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Вт</div>
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Ср</div>
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Чт</div>
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Пт</div>
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Сб</div>
+                    <div class="text-[10px] uppercase opacity-60 mb-1">Вс</div>
+
+                    <div></div><div></div><div></div><div></div><div></div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">1</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">2</div>
+                    
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">3</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">4</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">5</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">6</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">7</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">8</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">9</div>
+                    
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">10</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">11</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">12</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">13</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">14</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">15</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">16</div>
+                    
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">17</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">18</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">19</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">20</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">21</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">22</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">23</div>
+                    
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">24</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">25</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">26</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">27</div>
+                    <div class="relative w-8 h-8 flex items-center justify-center mx-auto">
+                        <svg class="absolute w-12 h-12 text-accent drop-shadow-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <span class="relative z-10 text-text-main">28</span>
+                    </div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">29</div>
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">30</div>
+                    
+                    <div class="w-8 h-8 flex items-center justify-center mx-auto">31</div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
             
             <!-- Индикатор скролла -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-accent">
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-accent">
                 <i data-lucide="chevron-down" class="w-8 h-8 opacity-60"></i>
             </div>
         </div>
     </section>
 
-    <!-- Вступительный текст -->
+    <!-- Вступительный текст и Таймер -->
     <section class="py-24 px-6 text-center max-w-3xl mx-auto reveal">
         <h2 class="font-serif text-3xl md:text-4xl mb-8 text-text-main">Дорогие близкие и друзья!</h2>
-        <p class="text-base md:text-lg leading-loose font-light opacity-80 mb-8">
-            Один день в этом году будет для нас особенным, и мы хотим провести его в кругу самых дорогих нам людей.<br>
-            С большим удовольствием приглашаем вас разделить с нами радость создания нашей семьи!
+        <p class="text-base md:text-lg leading-loose font-light opacity-80 mb-12">
+            Мы рады сообщить Вам, что состоится самое главное торжество в нашей жизни - день нашей свадьбы!<br>
+            Приглашаем Вас разделить с нами радость этого незабываемого дня!
         </p>
-        <p class="font-medium text-accent uppercase tracking-widest text-sm">Ждем вас с нетерпением!</p>
-    </section>
 
-    <!-- Таймер -->
-    <section class="py-16 px-6 bg-white reveal">
-        <div class="max-w-2xl mx-auto text-center">
+        <!-- Таймер внутри текста -->
+        <div class="max-w-2xl mx-auto text-center mt-12 pt-12 border-t border-accent-light/50">
             <p class="font-serif italic text-2xl text-accent mb-8">До нашей свадьбы осталось:</p>
             <div class="flex justify-center gap-4 md:gap-8">
                 <div class="timer-box w-20 h-20 md:w-24 md:h-24 rounded-full border border-accent-light flex flex-col items-center justify-center shadow-sm">
@@ -165,12 +220,19 @@
                 <div class="absolute left-5 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-2 border-accent rounded-full z-10"></div>
                 
                 <div class="w-full md:w-[45%] pl-16 md:pl-0 md:text-right">
+                    <!-- Иконка колец -->
+                    <div class="mb-4 flex justify-start md:justify-end">
+                        <svg class="w-12 h-12 text-accent opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9.5" cy="12" r="5.5"></circle>
+                            <circle cx="14.5" cy="12" r="5.5"></circle>
+                        </svg>
+                    </div>
                     <h3 class="font-serif text-3xl text-accent mb-2">14:15</h3>
                     <p class="font-medium text-lg mb-1">Регистрация брака</p>
                     <p class="text-sm opacity-60 font-light mb-4">Церемония в ЗАГСе</p>
                 </div>
                 <div class="w-full md:w-[45%] pl-16 md:pl-0 text-left">
-                    <div class="bg-white p-5 rounded-xl border border-accent-light shadow-sm inline-block">
+                    <div class="bg-white/80 backdrop-blur-md p-5 rounded-xl border border-accent-light/50 shadow-sm inline-block">
                         <div class="flex items-center gap-2 text-text-main mb-1">
                             <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i>
                             <span class="font-medium">ЗАГС</span>
@@ -182,17 +244,26 @@
             </div>
 
             <!-- Событие 2 -->
-            <div class="flex flex-col md:flex-row-reverse items-center justify-between relative w-full">
+            <div class="flex flex-col md:flex-row-reverse items-center justify-between mb-16 relative w-full">
                 <!-- Точка -->
                 <div class="absolute left-5 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-2 border-accent rounded-full z-10"></div>
                 
                 <div class="w-full md:w-[45%] pl-16 md:pl-0 md:text-left">
+                    <!-- Иконка блюда -->
+                    <div class="mb-4 flex justify-start">
+                        <svg class="w-12 h-12 text-accent opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 18h18"></path>
+                            <path d="M5 18a7 7 0 0 1 14 0"></path>
+                            <path d="M12 11v-2"></path>
+                            <path d="M10 9h4"></path>
+                        </svg>
+                    </div>
                     <h3 class="font-serif text-3xl text-accent mb-2">17:00</h3>
                     <p class="font-medium text-lg mb-1">Праздничный банкет</p>
                     <p class="text-sm opacity-60 font-light mb-4">Ужин, танцы и поздравления</p>
                 </div>
                 <div class="w-full md:w-[45%] pl-16 md:pl-0 md:text-right flex md:justify-end">
-                    <div class="bg-white p-5 rounded-xl border border-accent-light shadow-sm inline-block text-left">
+                    <div class="bg-white/80 backdrop-blur-md p-5 rounded-xl border border-accent-light/50 shadow-sm inline-block text-left">
                         <div class="flex items-center gap-2 text-text-main mb-1">
                             <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i>
                             <span class="font-medium">Ресторан</span>
@@ -202,29 +273,47 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Событие 3 -->
+            <div class="flex flex-col md:flex-row items-center justify-between relative w-full">
+                <!-- Точка -->
+                <div class="absolute left-5 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-2 border-accent rounded-full z-10"></div>
+                
+                <div class="w-full md:w-[45%] pl-16 md:pl-0 md:text-right">
+                    <!-- Иконка финала -->
+                    <div class="mb-4 flex justify-start md:justify-end">
+                        <svg class="w-12 h-12 text-accent opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-3xl text-accent mb-2">23:00</h3>
+                    <p class="font-medium text-lg mb-1">Окончание банкета</p>
+                    <p class="text-sm opacity-60 font-light mb-4">Теплые слова и завершение вечера</p>
+                </div>
+                <div class="w-full md:w-[45%] pl-16 md:pl-0 text-left">
+                    <div class="bg-white/80 backdrop-blur-md p-5 rounded-xl border border-accent-light/50 shadow-sm inline-block">
+                        <div class="flex items-center gap-2 text-text-main mb-1">
+                            <i data-lucide="heart" class="w-4 h-4 text-accent"></i>
+                            <span class="font-medium">Финал</span>
+                        </div>
+                        <p class="text-sm opacity-70">До скорой встречи!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Дресс-код и Детали -->
-    <section class="py-24 px-6 bg-white reveal text-center">
+    <!-- Меню и Детали -->
+    <section class="py-24 px-6 reveal text-center">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-16">
             
-            <!-- Дресс код -->
+            <!-- Меню -->
             <div class="flex-1">
-                <i data-lucide="shirt" class="w-8 h-8 mx-auto text-accent mb-4"></i>
-                <h2 class="font-serif text-3xl mb-6">Дресс-код</h2>
+                <i data-lucide="utensils" class="w-8 h-8 mx-auto text-accent mb-4"></i>
+                <h2 class="font-serif text-3xl mb-6">Меню</h2>
                 <p class="font-light opacity-80 leading-relaxed mb-6 text-sm">
-                    Мы будем очень благодарны, если при выборе нарядов вы поддержите атмосферу нашего праздника. 
-                    Пожалуйста, придерживайтесь пастельных и нежных тонов:
+                    Меню разнообразно, поэтому сообщите нам заранее, если у вас есть какие-либо предпочтения или диетические ограничения. После подтверждения вы сможете пройти опрос о своих вкусовых предпочтениях и напитках.
                 </p>
-                <!-- Цветовая палитра кружочками -->
-                <div class="flex justify-center gap-3">
-                    <div class="w-8 h-8 rounded-full shadow-sm" style="background-color: #FDF5E6;"></div>
-                    <div class="w-8 h-8 rounded-full shadow-sm" style="background-color: #E8DCC8;"></div>
-                    <div class="w-8 h-8 rounded-full shadow-sm" style="background-color: #D6C5B3;"></div>
-                    <div class="w-8 h-8 rounded-full shadow-sm" style="background-color: #E6E0D4;"></div>
-                    <div class="w-8 h-8 rounded-full shadow-sm" style="background-color: #B8A89A;"></div>
-                </div>
             </div>
 
             <!-- Подарки -->
@@ -240,44 +329,71 @@
     </section>
 
     <!-- RSVP Форма -->
-    <section class="py-24 px-6 reveal bg-[#FBF9F6]">
+    <section class="py-24 px-6 reveal">
         <div class="max-w-xl mx-auto">
             <h2 class="font-serif text-4xl text-center mb-4">Анкета гостя</h2>
-            <p class="text-center font-light opacity-70 mb-10 text-sm">Пожалуйста, подтвердите ваше присутствие до <strong class="font-medium text-text-main">15 августа 2026 года</strong>.</p>
+            <p class="text-center font-light opacity-70 mb-10 text-sm">Пожалуйста, подтвердите ваше присутствие до <strong class="font-medium text-text-main">25 июля 2026 года</strong>.</p>
             
-            <div id="formContainer" class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-accent-light">
+            <div id="formContainer" class="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-sm border border-accent-light/50">
                 <form id="rsvpForm" onsubmit="submitForm(event)">
                     
                     <!-- Имя -->
                     <div class="mb-6">
                         <label class="block text-sm uppercase tracking-wide font-medium text-text-main mb-2">Имя и фамилия</label>
                         <input type="text" id="guestName" required placeholder="Например: Иван Иванов" 
-                               class="w-full px-4 py-3 border-b-2 border-gray-100 focus:border-accent bg-transparent outline-none transition-colors rounded-t-md">
+                               class="w-full px-4 py-3 border-b-2 border-gray-100 focus:border-accent bg-white/50 outline-none transition-colors rounded-t-md">
+                    </div>
+
+                    <!-- Еда -->
+                    <div class="mb-8">
+                        <label class="block text-sm uppercase tracking-wide font-medium text-text-main mb-4">Есть ли у вас особые предпочтения по еде?</label>
+                        <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="food" value="нет">
+                                <span class="opacity-80 text-sm">нет</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="food" value="не ем мясо">
+                                <span class="opacity-80 text-sm">не ем мясо</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="food" value="не ем рыбу">
+                                <span class="opacity-80 text-sm">не ем рыбу</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="food" value="вегетарианец">
+                                <span class="opacity-80 text-sm">вегетарианец</span>
+                            </label>
+                        </div>
                     </div>
 
                     <!-- Напитки -->
                     <div class="mb-8">
-                        <label class="block text-sm uppercase tracking-wide font-medium text-text-main mb-4">Предпочтения по напиткам</label>
+                        <label class="block text-sm uppercase tracking-wide font-medium text-text-main mb-4">Какой алкоголь вы предпочитаете?</label>
                         <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="drink" value="Красное вино">
+                                <span class="opacity-80 text-sm">Красное вино</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="drink" value="Белое вино">
+                                <span class="opacity-80 text-sm">Белое вино</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="drink" value="Шампанское">
+                                <span class="opacity-80 text-sm">Шампанское</span>
+                            </label>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input type="checkbox" name="drink" value="Виски/коньяк">
+                                <span class="opacity-80 text-sm">Виски/коньяк</span>
+                            </label>
                             <label class="flex items-center space-x-3 cursor-pointer group">
                                 <input type="checkbox" name="drink" value="Водка">
                                 <span class="opacity-80 text-sm">Водка</span>
                             </label>
                             <label class="flex items-center space-x-3 cursor-pointer group">
-                                <input type="checkbox" name="drink" value="Вино">
-                                <span class="opacity-80 text-sm">Вино</span>
-                            </label>
-                            <label class="flex items-center space-x-3 cursor-pointer group">
-                                <input type="checkbox" name="drink" value="Коньяк">
-                                <span class="opacity-80 text-sm">Коньяк</span>
-                            </label>
-                            <label class="flex items-center space-x-3 cursor-pointer group">
-                                <input type="checkbox" name="drink" value="Виски">
-                                <span class="opacity-80 text-sm">Виски</span>
-                            </label>
-                            <label class="flex items-center space-x-3 cursor-pointer group col-span-2">
-                                <input type="checkbox" name="drink" value="Безалкогольные">
-                                <span class="opacity-80 text-sm">Безалкогольные напитки</span>
+                                <input type="checkbox" name="drink" value="Не буду пить алкоголь">
+                                <span class="opacity-80 text-sm">Не буду пить алкоголь</span>
                             </label>
                         </div>
                     </div>
@@ -286,7 +402,7 @@
                     <div class="mb-10">
                         <label class="block text-sm uppercase tracking-wide font-medium text-text-main mb-2">Ваше пожелание</label>
                         <textarea id="guestWish" rows="3" placeholder="Пара теплых слов..." 
-                                  class="w-full px-4 py-3 border border-gray-100 rounded-lg focus:border-accent outline-none transition-colors resize-none mb-3 bg-gray-50/50"></textarea>
+                                  class="w-full px-4 py-3 border border-gray-100 rounded-lg focus:border-accent outline-none transition-colors resize-none mb-3 bg-white/50"></textarea>
                         
                         <button type="button" onclick="generateWishWithAI()" id="aiBtn" class="flex items-center justify-center gap-2 w-full ai-button text-white px-4 py-3 rounded-lg text-sm font-medium shadow-sm hover:shadow-md transition-all">
                             <i data-lucide="sparkles" class="w-4 h-4"></i>
@@ -305,7 +421,7 @@
             </div>
 
             <!-- Сообщение об успехе -->
-            <div id="successMessage" class="hidden bg-white p-10 rounded-2xl shadow-sm border border-accent-light text-center">
+            <div id="successMessage" class="hidden bg-white/80 backdrop-blur-md p-10 rounded-2xl shadow-sm border border-accent-light/50 text-center">
                 <div class="w-16 h-16 bg-accent-light rounded-full flex items-center justify-center mx-auto mb-4 text-accent">
                     <i data-lucide="check" class="w-8 h-8"></i>
                 </div>
